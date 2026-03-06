@@ -1,35 +1,38 @@
-:root {
-    --blackberry: #48182F;
-    --moonstone: #D4CBC4;
-}
+/* Reset and Foundation */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    background-color: var(--blackberry);
-    color: var(--moonstone);
-    font-family: 'Montserrat', sans-serif; /* Using the font from your image */
-    margin: 0;
+    background-color: #48182F; /* Blackberry */
+    color: #D4CBC4;           /* Moonstone */
+    font-family: 'Montserrat', sans-serif;
+    /* This makes the whole page scroll like a slide-deck */
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
-/* Each page/section takes up full screen */
+/* The Slide Engine */
 .portfolio-page {
-    min-height: 100vh;
-    padding: 80px 15%;
+    width: 100vw;
+    height: 100vh;
+    padding: 5% 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-bottom: 1px solid rgba(212, 203, 196, 0.2);
+    scroll-snap-align: start; /* Locks the page in place */
+    border-bottom: 2px solid rgba(212, 203, 196, 0.1);
 }
 
-h1 {
-    font-family: 'Saudagar', serif; /* Or use the font you identified */
-    font-size: 5rem;
-    color: var(--moonstone);
-}
+/* Typography */
+h1 { font-size: 6rem; font-family: serif; color: #D4CBC4; }
+h2 { font-size: 3rem; margin-bottom: 20px; }
 
-/* Styling the blank spaces for clients to fill in */
+/* The Fill-in-the-blank style */
 .fill-in-blank {
-    border-bottom: 1px solid var(--moonstone);
-    min-height: 1.5em;
-    margin-top: 10px;
-    width: 100%;
+    border-bottom: 1px solid #D4CBC4;
+    display: inline-block;
+    width: 300px;
+    height: 1.2rem;
+    margin-left: 10px;
+    vertical-align: middle;
 }
