@@ -1,0 +1,35 @@
+:root {
+    --blackberry: #48182F;
+    --moonstone: #D4CBC4;
+}
+
+body {
+    background-color: var(--blackberry);
+    color: var(--moonstone);
+    font-family: 'Montserrat', sans-serif; /* Using the font from your image */
+    margin: 0;
+}
+
+/* Each page/section takes up full screen */
+.portfolio-page {
+    min-height: 100vh;
+    padding: 80px 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid rgba(212, 203, 196, 0.2);
+}
+
+h1 {
+    font-family: 'Saudagar', serif; /* Or use the font you identified */
+    font-size: 5rem;
+    color: var(--moonstone);
+}
+
+/* Styling the blank spaces for clients to fill in */
+.fill-in-blank {
+    border-bottom: 1px solid var(--moonstone);
+    min-height: 1.5em;
+    margin-top: 10px;
+    width: 100%;
+}
